@@ -114,6 +114,7 @@ a{
 body {
 	text-align: center;
 	margin: 1em auto;
+	background: #edf1f7
 }
 
 .options {
@@ -173,8 +174,4 @@ button:hover {
 	width: 500px;
 	margin: 1em auto;
 
-}
-
-.display {
-	font-family: boldfont;
 }
