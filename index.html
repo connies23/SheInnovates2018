@@ -1,0 +1,65 @@
+<html>
+<!DOCTYPE html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+<div id='startups'> </div>
+<div id='interested' style='padding: 10px'> </div>
+</body>
+
+<script type="text/javascript">
+
+var colors = [
+  ['rgb(255, 163, 228)', 'rgb(124, 172, 249)']];
+
+var data = [{
+hole: .4,
+hoverinfo: 'label',
+  values: [5, 95],
+  labels: ['Women', 'Men'],
+  marker: {
+    colors: colors[0]
+  },
+  type: 'pie',
+  text: 'Startups',
+  textposition: 'inside',
+}];
+
+var layout = {
+  height: 400,
+  width: 500
+};
+
+var yes = {
+	showgrid: false,
+  type: 'bar',
+  x: [74],
+  y: ['n'],
+  orientation: 'h',
+  marker: {color: 'rgb(99, 21, 76)'}
+};
+
+var no = {
+	showgrid: false,
+  type: 'bar',
+  x: [26],
+  y: ['n'],
+  orientation: 'h',
+  marker: {color: 'rgb(214, 203, 211)'}
+};
+
+var inter = [yes, no];
+
+var layoutI = {
+  title: '74 young girls are interested in tech',
+  barmode: 'stack',
+  width: 1400,
+  height: 300,
+  hovermode: !1,
+};
+
+Plotly.newPlot('startups', data, layout);
+Plotly.newPlot('interested', inter, layoutI);
+
+
+</script>
+</html>
