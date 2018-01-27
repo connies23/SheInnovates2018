@@ -71,14 +71,17 @@ li a:visited{
 }
 
 .coffee {font-family: coffee;	
+	font-size: 100px;
 }
 
 .grocery {font-family: grocery;
+	font-size: 100px;
+	
 	
 }
 
 .sandwich {font-family: sandwich;
-	
+	font-size: 100px;
 }
 
 
@@ -142,7 +145,8 @@ font-family: subway;}
 }
 
 button {
-	background-color: #0394c4; color:white; padding: 150px; 
+	background-color:  #008080;
+	color:white; padding: 50px; 
 	cursor: pointer;
 	font-family: subway;
 	border: none;

@@ -2,13 +2,73 @@
 <!DOCTYPE html> <head>
 <link REL="STYLESHEET" TYPE="text/css" HREF="bodystyle.css">
 <title> Fwd: Donate </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
-<div class="title"> <img src="fwdd.png" alt="LOGO"> 
+<body onload="loadFunction()">
+<div class="title"> <img src="fwdd.png" alt="LOGO"> <body>
 		<ul>
   <li><a href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li></ul> </div>
+
+  </div>
+  <table class="choices"> <tr>
+  <td id="coffee"> <button class="coffee" onclick="showCoffee()"> f </button></td>
+  <td class="sandwich"><button class="sandwich" onclick="showMeal()"> Y </button></td>
+  <td class="sandwich"> <button class="sandwich" onclick="showPizza()"> o </button> </td>
+  <td class="grocery"><button class="grocery" onclick="showGrocery()"> g </button></td> </tr>
+  <tr class="options"> 
+    <td> coffee </td>
+    <td> meals </td>
+    <td> pizza </td>
+    <td> grocery </td> 
+  </tr>
+</table>
+
+
+<table id="options"> 
+  <tr class="options"> 
+    <td> Starbucks </td>
+    <td class="address">  417 S Craig St, Pittsburgh, PA 15213 </td>    
+  </tr> <tr class="options">
+  <td> Crazy Mocha </td>
+    <td class="address">  4400 Forbes Ave, Pittsburgh, PA 15213 </td></tr> 
+</table>
+
+<table id="pizza"> 
+  <tr class="options"> 
+    <td> Sorrentos </td>
+    <td class="address">  233 Atwood St, Pittsburgh, PA 15213 </td>   
+  </tr><tr class="options">
+  <td> Antoon's </td>
+    <td class="address">  247 Atwood St, Pittsburgh, PA 15213 </td></tr>
+</table>
+
+
+<table id="grocery"> 
+  <tr class="options"> 
+    <td> Giant Eagle </td>
+    <td class="address">  2021 Wharton Ave, Pittsburgh, PA 15203 </td>    
+  </tr><tr class="options">
+  <td> Giant Eagle Market District </td>
+    <td class="address"> 5550 Centre Ave, Pittsburgh, PA 15232 </td></tr>
+</table>
+
+
+<table id="meal"> 
+  <tr class="options"> 
+    <td> Panera </td>
+    <td class="address">  3800 Forbes Ave, Pittsburgh, PA 15213 </td>   
+  </tr> <tr class="options"> 
+  <td> Noodles, Co. </td>
+    <td class="address">  3805 Forbes Ave, Pittsburgh, PA 15213 </td></tr>
+</table>
+
+
+
+</div>
   <div class="input">
   <select required>
   Pay forward:
@@ -20,6 +80,47 @@
 </select>
   <input type="submit">
 </div>
-<body>
+
+<script>
+
+
+    function showCoffee(){
+      $("#options").show();
+      $("#pizza").hide();
+      $("#grocery").hide();
+      $("#meal").hide();
+    }
+
+    function showPizza(){
+      $("#pizza").show();
+      $("#options").hide();
+      $("#grocery").hide();
+      $("#meal").hide();
+    }
+
+    function showMeal(){
+      $("#meal").show();
+      $("#options").hide();
+      $("#pizza").hide();
+      $("#grocery").hide();
+    }
+
+    function showGrocery(){
+      $("#grocery").show();
+      $("#options").hide();
+      $("#pizza").hide();
+      $("#meal").hide();
+    }
+
+    function loadFunction(){
+      $("#options").hide();
+      $("#pizza").hide();
+      $("#grocery").hide();
+      $("#meal").hide();
+    }
+
+   
+ </script>
+
 </body>
 </html>
