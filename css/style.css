@@ -9,6 +9,13 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.title img {
+  height: 100px;
+}
+
+title {
+  height: 100px;
+}
 .cotn_principal {
   position: absolute;
   width: 100%;
@@ -349,3 +356,5 @@ font-weight: 400;
     margin: 10px;
 margin-left: 30px;
 }
+
+button {background: green; color: black; padding: 5px; border:none; cursor:pointer;}

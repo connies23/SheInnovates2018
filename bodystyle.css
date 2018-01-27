@@ -110,6 +110,7 @@ a{
 
 body {
 	text-align: center;
+	margin: 1em auto;
 }
 
 .options {
@@ -134,4 +135,29 @@ font-family: subway;}
 .input {
 	font-family: boldfont;
 	padding-top: 20px;
+}
+
+.buttons {
+	padding-top: 50px;
+}
+
+button {
+	background-color: #0394c4; color:white; padding: 150px; 
+	cursor: pointer;
+	font-family: subway;
+	border: none;
+}
+
+button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.rectangle {
+	padding-top: 20px;
+	text-align:center;
+	background-color: #263f6d; 
+	height: 1000px;
+	width: 500px;
+	margin: 1em auto;
+
 }
