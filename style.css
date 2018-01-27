@@ -20,13 +20,16 @@
 
 .title img {
 	text-align:center;
-	height: 300px;
+	height: 500px;
 	padding-top: 100px;
 }
 
 body {
 	width: 100%;
-	background-image: url("people-in-a-coffee-shop.webp");
+	margin: 0;
+	padding:0;
+	background-image: url("coffeshop.png");
+	overflow: none;
 }
 
 
