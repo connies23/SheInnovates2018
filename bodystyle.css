@@ -146,6 +146,15 @@ button {
 	cursor: pointer;
 	font-family: subway;
 	border: none;
+	display: inline-block;
+}
+
+button .left{
+	float: left;
+}
+
+button .right {
+	float:right;
 }
 
 button:hover {
