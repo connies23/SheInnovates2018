@@ -1,0 +1,72 @@
+@font-face {
+	font-family: coffee;
+	src: url("coffee icons.ttf");
+}
+
+@font-face{
+	font-family: sandwich;
+	src: url("Fast Food Icons.ttf");
+}
+
+@font-face{
+	font-family: subwyay;
+	src: url("subway-black.ttf");
+}
+
+@font-face{
+	font-family: boldFont;
+	src: url("theboldfont.ttf");
+}
+
+@font-face{
+	font-family: bakery;
+	src: url("Bakery.ttf");
+}
+
+
+
+.title {
+	height: 200px;
+	text-align: center;
+}
+
+.title img {
+	text-align:center;
+	height: 300px;
+}
+
+table {
+	margin: 1em auto;
+	font-family: boldfont;
+	font-size: 50px;
+}
+
+td {
+	padding: 20px;
+}
+
+.font {
+	font-family: boldfont;
+}
+
+.coffee {font-family: coffee;
+font-size: 100px;	
+}
+
+.grocery {font-family: grocery;
+	
+}
+
+.sandwich {font-family: sandwich;
+	
+}
+
+.bakery {font-family: bakery;
+	font-size: 100px;
+	
+}
+
+body{
+	padding: 20px;
+	text-align: center;
+}

@@ -13,9 +13,20 @@
 	src: url("travelcons.ttf");
 }
 
+@font-face{
+	font-family: boldFont;
+	src: url("theboldfont.ttf");
+}
+
+@font-face{
+	font-family: subwyay;
+	src: url("subway-black.ttf");
+}
+
 .title {
-	height: 200px;
+	height: 150px;
 	text-align: center;
+	background-color: #f4ce42;
 }
 
 .title img {
@@ -24,8 +35,12 @@
 	padding-top: 10px;
 }
 
-ul {
+table {
+	margin: 1em auto;
+}
 
+ul {
+	font-family: subway;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -38,24 +53,24 @@ li {
 
 li a{
     display: inline;
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: black;
     text-decoration-style:  none;
-    font-size: 20px;
+    font-size: 10px;
     text-decoration: none;
 }
 
 li a:hover{
-	color: gray ;
+	text-decoration: none;
+	border-bottom: 2px solid black;
 }
 
 li a:visited{
 	text-decoration-style:  none;
 }
 
-.coffee {font-family: coffee;
-	
-	
+.coffee {font-family: coffee;	
 }
 
 .grocery {font-family: grocery;
@@ -66,11 +81,11 @@ li a:visited{
 	
 }
 
+
 .choices {
+	text-align: center;
 	display:inline-block;
-	float: left;
-	padding-left: 40px;
-	font-size: 100px;
+	font-size: 50px;
 	text-decoration: none;
 }
 
@@ -79,16 +94,41 @@ li a:visited{
 	text-decoration: none;
 }
 
-.choices a:hover{
-	color:gray;
-	font-size: 125px;
+a{
+	color:black;
+	text-decoration: none;
 }
 
+.choices a:hover{
+	color:gray;
+	font-size: 100px;
+}
 
 
 body {
 	text-align: center;
-	padding-bottom: 50px;
-	padding-right: 100px;
-	padding-left:100px;
+}
+
+.options {
+	text-align: center;
+	font-family: boldfont;
+	font-size: 50px;
+}
+
+.options td {
+	font-size: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.options th {
+	font-size: 20px;
+}
+
+.address {text-decoration: underline;
+font-family: subway;}
+
+.input {
+	font-family: boldfont;
+	padding-top: 20px;
 }
