@@ -174,3 +174,7 @@ button:hover {
 	margin: 1em auto;
 
 }
+
+.display {
+	font-family: boldfont;
+}

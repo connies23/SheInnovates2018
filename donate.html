@@ -3,7 +3,9 @@
 <link REL="STYLESHEET" TYPE="text/css" HREF="bodystyle.css">
 <title> Fwd: Donate </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<script src="path/to/jquery.js"></script> 
+<script src="path/to/jquery.nice-select.js"></script>
+<link rel="stylesheet" href="path/to/nice-select.css">
 </head>
 <body onload="loadFunction()">
 		<ul>
@@ -66,6 +68,8 @@
     <td class="address">  3805 Forbes Ave, Pittsburgh, PA 15213 </td></tr>
 </table>
 
+<div id="display"> </div>
+
 
 
 </div>
@@ -83,8 +87,10 @@
 
 <script>
 
+    var category = "";
 
     function showCoffee(){
+      category = "coffee";
       $("#options").show();
       $("#pizza").hide();
       $("#grocery").hide();
@@ -92,6 +98,7 @@
     }
 
     function showPizza(){
+      category = "pizza";
       $("#pizza").show();
       $("#options").hide();
       $("#grocery").hide();
@@ -99,6 +106,7 @@
     }
 
     function showMeal(){
+      category = "meal";
       $("#meal").show();
       $("#options").hide();
       $("#pizza").hide();
@@ -106,10 +114,12 @@
     }
 
     function showGrocery(){
+      category = "grocery";
       $("#grocery").show();
       $("#options").hide();
       $("#pizza").hide();
       $("#meal").hide();
+
     }
 
     function loadFunction(){
@@ -119,6 +129,14 @@
       $("#meal").hide();
       $("#dropdown").hide();
     }
+
+    function display(){
+      document.getElementById('display').innerHTML=ball;
+    }
+
+    $(document).ready(function() {
+  $('select').niceSelect();
+});
 
    
  </script>
