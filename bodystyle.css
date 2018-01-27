@@ -76,7 +76,7 @@ li a:visited{
 
 .grocery {font-family: grocery;
 	font-size: 100px;
-	
+
 	
 }
 
@@ -146,7 +146,7 @@ font-family: subway;}
 
 button {
 	background-color:  #008080;
-	color:white; padding: 50px; 
+	color:white; padding: 30px; 
 	cursor: pointer;
 	font-family: subway;
 	border: none;
