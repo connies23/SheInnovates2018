@@ -64,18 +64,44 @@ li a:visited{
 
 .parallax {
     /* The image used */
-    padding-top: 40px;
+    padding-top: 10px;
     background-color: #008080;
     opacity: 0.97;
 
+	font-family: 'Lobster', cursive;
+	
+	font-size: xx-large;
+
     /* Set a specific height */
-    min-height: 200px; 
+    min-height: 10px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+.quote {
+ /* The image used */
+    padding-top: 30px;
+    background-color: #008080;
+    opacity: 0.97;
+
+	
+	font-family: 'Courgette', cursive;
+	font-size: xx-large;
+	color: white;
+    /* Set a specific height */
+    min-height: 100px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 button .login{
