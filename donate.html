@@ -16,6 +16,8 @@
   <li><a href="#about">About</a></li></ul> </div>
 
   </div>
+
+  <div>
   <table class="choices"> <tr>
   <td id="coffee"> <button class="coffee" onclick="showCoffee()"> f </button></td>
   <td class="sandwich"><button class="sandwich" onclick="showMeal()"> Y </button></td>
@@ -30,14 +32,11 @@
 </table>
 
 
-<table id="options"> 
-  <tr class="options"> 
-    <td> Starbucks </td>
-    <td class="address">  417 S Craig St, Pittsburgh, PA 15213 </td>    
-  </tr> <tr class="options">
-  <td> Crazy Mocha </td>
-    <td class="address">  4400 Forbes Ave, Pittsburgh, PA 15213 </td></tr> 
-</table>
+<div id="options" class="stores"> 
+  
+    <button> Starbucks  417 S Craig St, Pittsburgh, PA 15213 </button>   
+    <button>  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
+</div>
 
 <table id="pizza"> 
   <tr class="options"> 
@@ -68,57 +67,153 @@
     <td class="address">  3805 Forbes Ave, Pittsburgh, PA 15213 </td></tr>
 </table>
 
-<div id="display"> </div>
 
-
-
-</div>
-  <div id="dropdown">
-  <select required>
-  Pay forward:
+  <div id="coffees">
+  <select id = "Starbucks">
   <option value=""> Select one</option>
   <option value="volvo">Black Coffee</option>
   <option value="saab">Latte</option>
   <option value="opel">Seasonal Drink</option>
   <option value="audi">Drink & Pastry</option>
-</select>
-  <input type="submit">
+  </select>
+  <button class="submit" onclick="getDrop()"> Click </button>
+
+
+
+<select id = "CrazyMocha">
+  <option value=""> Select one</option>
+  <option value="Hot Brew Coffee"> Hot Brew Coffee</option>
+  <option value="Iced Coffee"> Iced Coffee</option>
+  <option value="Hot Chocolate"> Hot Chocolate</option>
+  <option value="Muffins"> Muffin</option>
+  <option value="Bagel"> Bagel</option>
+  </select>
+  <button class="submit" onclick="getDrop()"> Click </button>
+  </div>
+
+<div id="pizzas">
+<select id = "Sorrentos">
+  <option value=""> Select one</option>
+  <option value="a"> Small Pizza</option>
+  <option value="b"> Medium Pizza</option>
+  <option value="c"> Large Pizza</option>
+  <option value="h"> Large Pizza and Soda</option>
+  <option value="d"> Breadsticks</option>
+  <option value="e"> Soda</option>
+  <option value="f"> Pepperoni Rolls</option>
+  <option value="g"> Calzone</option>
+  </select>
+  <button class="submit" onclick="getDrop()"> Click </button>
+
+
+
+<select id = "Antoons">
+  <option value=""> Select one</option>
+  <option value="Pizza slice"> Pizza slice</option>
+  <option value="Whole pizza"> Whole Pizza</option>
+  <option value="Pizza and wings"> Pizza and Wings</option>
+  <option value="Hoagie"> Hoagie</option>
+  <option value="Calzone"> Calzone</option>
+  <option value="Wings"> Wings</option>
+  </select>
+   <button class="submit" onclick="getDrop()"> Click </button>
 </div>
+
+<div id="groceries">
+<select id="gianteagle">
+  <option value=""> Select one</option>
+  <option value="a"> Bathroom Package</option>
+  <option value="d"> Cleaning Supply Package </option>
+  <option value="e"> Medical Supplies </option>
+  <option value="b"> Loaf of Bread</option>
+  <option value="c"> Gallon of Milk</option>
+  </select>
+   <button class="submit" onclick="getDrop()"> Click </button>
+  
+
+  
+<select id="giantmarket">
+  <option value=""> Select one</option>
+  <option value="a"> Meat and Cheese Package</option>
+  <option value="b"> Salad Supplies</option>
+  <option value="c"> Taco Package</option>
+  <option value="d"> Soup</option>
+  <option value="e"> Soup and Bread</option>
+  </select>
+   <button class="submit" onclick="getDrop()"> Click </button>
+  
+</div>
+
+<div id="meals">
+<select id="panera">
+  <option value=""> Select one</option>
+  <option value="a"> Bagel</option>
+  <option value="b"> Coffee</option>
+  <option value="c"> Bagel and Coffee</option>
+  <option value="f"> Soup</option>
+  <option value="d"> Salad</option>
+  <option value="e"> Sandwich</option>
+  <option value="g"> Pick Two</option>
+  </select>
+  <button class="submit" onclick="getDrop()"> Click </button>
+
+
+
+<select id="noodles">
+  <option value=""> Select one</option>
+  <option value="a"> Regular Pasta</option>
+  <option value="b"> Small Pasta</option>
+  <option value="c"> Soup</option>
+  <option value="d"> Salad</option>
+  <option value="e"> Kid's Meal</option>
+  </select>
+   <button class="submit" onclick="getDrop()"> Click </button>
+</div>
+
+</div>
+
+<div class="footer" id="cat">   </div>
 
 <script>
 
     var category = "";
+    var shop = "";
+    var food = "";
 
     function showCoffee(){
-      category = "coffee";
+      category = "Coffee";
       $("#options").show();
       $("#pizza").hide();
       $("#grocery").hide();
       $("#meal").hide();
+      display();
     }
 
     function showPizza(){
-      category = "pizza";
+      category = "Pizza";
       $("#pizza").show();
       $("#options").hide();
       $("#grocery").hide();
       $("#meal").hide();
+      display();
     }
 
     function showMeal(){
-      category = "meal";
+      category = "Meal";
       $("#meal").show();
       $("#options").hide();
       $("#pizza").hide();
       $("#grocery").hide();
+      display();
     }
 
     function showGrocery(){
-      category = "grocery";
+      category = "Grocery";
       $("#grocery").show();
       $("#options").hide();
       $("#pizza").hide();
       $("#meal").hide();
+      display();
 
     }
 
@@ -128,15 +223,23 @@
       $("#grocery").hide();
       $("#meal").hide();
       $("#dropdown").hide();
+      
     }
 
     function display(){
-      document.getElementById('display').innerHTML=ball;
+      document.getElementById('cat').innerHTML = category;
+      document.getElementById('place').innerHTML= shop;
+      
     }
 
-    $(document).ready(function() {
-  $('select').niceSelect();
-});
+    function getDrop(){
+      
+      var drop = document.getElementById("CrazyMocha");
+      document.getElementById('food').innerHTML= drop.value;
+      
+
+
+    }
 
    
  </script>

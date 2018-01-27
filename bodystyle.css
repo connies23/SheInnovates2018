@@ -113,13 +113,18 @@ a{
 
 body {
 	text-align: center;
-	margin: 1em auto;
+	margin-top: 1em auto;
+	margin-right: 1em auto;
+	margin-left: 1em auto;
+	
+
 }
 
 .options {
 	text-align: center;
 	font-family: boldfont;
 	font-size: 50px;
+
 }
 
 .options td {
@@ -144,7 +149,7 @@ font-family: subway;}
 	padding-top: 50px;
 }
 
-button {
+button   {
 	background-color:  #008080;
 	color:white; padding: 30px; 
 	cursor: pointer;
@@ -175,6 +180,39 @@ button:hover {
 
 }
 
-.display {
+#display {
 	font-family: boldfont;
+	font-size: 20px;
+	
+}
+
+.submit
+{
+	background-color:  #008080;
+	color:white; 
+	padding: 5px; 
+	cursor: pointer;
+	font-family: subway;
+	border: none;
+	display: inline-block;
+
+}
+
+footer {
+    position:relative;
+    clear:both;
+    height:100px; /* Tinggi footer */
+    line-height:30px;
+    margin-top:-30px; /* Angkat ke atas setinggi 'tinggi footer' */
+    background-color:black;
+    color:white;
+    padding-top: 10px;
+}
+
+.stores {
+	background-color: white;
+	color:black;
+	padding: 5px;
+	border: none;
+	display: inline-block;
 }
