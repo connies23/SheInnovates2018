@@ -9,12 +9,14 @@
        * element that contains the map. */
       #map {
         height: 100%;
+		width:  70%
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+        height: 80%;
+        margin: 50px 0 0 130px;
+        padding: 10;
+		background: #edf1f7
       }
     </style>
   </head>
@@ -25,8 +27,8 @@
       function initMap() {
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
-          center: {lat: -28.024, lng: 140.887}
+          zoom: 10,
+          center: {lat: 40.4417087, lng: -79.95733910000001}
         });
 
         // Create an array of alphabetical characters used to label the markers.
@@ -55,7 +57,8 @@
         {lat: 40.488347, lng: -79.88890700000002}, //walmart
         {lat: 40.45816730000001, lng: -79.9349191}, //aldi
         {lat: 40.4269137, lng: -79.96752809999998}, //aldi
-        {lat: 40.4589599, lng: -79.91933449999999}
+        {lat: 40.4589599, lng: -79.91933449999999},
+		{lat: 40.456538, lng: -79.934433} //giant eagle
       ]
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
