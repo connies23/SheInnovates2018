@@ -1,0 +1,53 @@
+@font-face {
+	font-family: coffee;
+	src: url("coffee icons.ttf");
+}
+
+@font-face{
+	font-family: sandwich;
+	src: url("Fast Food Icons.ttf");
+}
+
+.title {
+	height: 200px;
+	text-align: center;
+}
+
+.title img {
+	text-align:center;
+	height: 300px;
+	padding-top: 100px;
+}
+
+body {
+	width: 100%;
+	background-image: url("people-in-a-coffee-shop.webp");
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;   
+}
+
+li {
+	display:inline;
+}
+
+li a{
+    display: inline;
+    padding-left: 20px;
+    color: black;
+    text-decoration-style:  none;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+li a:hover{
+	color:   #aed581 ;
+}
+
+li a:visited{
+	text-decoration-style:  none;
+}
