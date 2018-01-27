@@ -1,11 +1,81 @@
 <html>
-<!DOCTYPE html>
-<link REL="STYLESHEET" TYPE="text/css" HREF="style.css"> 
+<!DOCTYPE html><head>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel="stylesheet" href="css/style.css">
+	<link REL="STYLESHEET" TYPE="text/css" HREF="style.css"> 
+</head>
 <title> Fwd: </title>
 <body>
-	<div class="title"> <a href="login_signup.html"> <img src="fwdd.png" alt="LOGO"> </a>
-	<div class="parallax"> <div class="buttons"> <button>  LOGIN & SIGNUP </button></div></div>
+	<div class="title"> <img src="fwdd.png" alt="LOGO"> 
+	
 
-  <div class="about"> About Us: <p> We are a company that prides ourselves on giving back to our community </p></div> </div>
+  <div class="parallax"> About Us: <p> We are a company that prides ourselves on giving back to our community </p></div> 
+
+  <div class="cotn_principal">
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        <h2>LOGIN</h2>  
+  <p>Welcome back! Log in to your account below.</p> 
+  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>SIGN UP</h2>
+
+  
+  <p>We're excited that you're joining! Let's get you settled in.</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="pitt.jpg" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="pitt.jpg" alt="" />
+       </div>
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>LOGIN</h2>
+ <input type="text" placeholder="Email" />
+<input type="password" placeholder="Password" />
+<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+<button class="btn_login" onclick="location.href='choose.html';"> CONTINUE </button>
+  </div>
+  
+   <div class="cont_form_sign_up">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>SIGN UP</h2>
+<input type="text" placeholder="Email" />
+<input type="text" placeholder="User" />
+<input type="password" placeholder="Password" />
+<input type="password" placeholder="Confirm Password" />
+<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+
+  </div>
+
+    </div>
+    
+  </div>
+ </div>
+</div>
+  
+</div>
+
+ <script  src="js/index.js"></script>
 </body>
 </html>
