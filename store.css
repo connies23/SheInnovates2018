@@ -70,3 +70,11 @@ body{
 	padding: 20px;
 	text-align: center;
 }
+
+title img {
+	size: 100%;
+}
+
+#type {
+	color: #008080 ;
+}
