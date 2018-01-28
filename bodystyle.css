@@ -151,7 +151,8 @@ font-family: subway;}
 
 button  {
 	background-color:  #008080;
-	color:white; padding: 30px; 
+	color:white; 
+	padding: 50px; 
 	cursor: pointer;
 	font-family: subway;
 	border: none;
@@ -217,7 +218,7 @@ footer {
 
 }
 
-.coffee, .pizzas, .meals, .groceries {
+.coffees, .pizzas, .meals, .groceries {
 	padding: 50px;
 }
 

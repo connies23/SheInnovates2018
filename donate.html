@@ -32,64 +32,64 @@
 </table>
 
 
-<div id="options" class="stores"> 
-  
-    <button class="stores" onclick="storePick('starbucks')"> Starbucks  417 S Craig St, Pittsburgh, PA 15213 </button>   
-    <button class="stores">  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
+<div id="options" class="stores">  
+    <button class="stores" onclick="storePick('Starbucks')"> Starbucks  417 S Craig St, Pittsburgh, PA 15213 </button>   
+    <button class="stores" onclick="storePick('Crazy Mocha')">  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
 </div>
 
 <div id="pizza">  
-    <button class="stores"> Sorrentos 233 Atwood St, Pittsburgh, PA 15213 </button>   
-    <button class="stores"> Antoon's 247 Atwood St, Pittsburgh, PA 15213 </button>
+    <button class="stores" onclick="storePick('Sorrentos')"> Sorrentos 233 Atwood St, Pittsburgh, PA 15213 </button>   
+    <button class="stores" onclick="storePick('Antoon's)"> Antoon's 247 Atwood St, Pittsburgh, PA 15213 </button>
 </div>
 
 
 <div id="grocery"> 
-  <button class="stores"> Giant Eagle 2021 Wharton Ave, Pittsburgh, PA 15203 </button>   
-  <button class="stores"> Giant Eagle Market District 5550 Centre Ave, Pittsburgh, PA 15232 </button>
+  <button class="stores" onclick="storePick('Giant Eagle')"> Giant Eagle 2021 Wharton Ave, Pittsburgh, PA 15203 </button>   
+  <button class="stores" onclick="storePick('Giant Eagle Market District')"> Giant Eagle Market District 5550 Centre Ave, Pittsburgh, PA 15232 </button>
 </div>
 
 
 <div id="meal"> 
-  <button class="stores">  Panera 3800 Forbes Ave, Pittsburgh, PA 15213 </button>  
-  <button class="stores"> Noodles, Co. 3805 Forbes Ave, Pittsburgh, PA 15213 </button>
+  <button class="stores" onclick="storePick('Panera')">  Panera 3800 Forbes Ave, Pittsburgh, PA 15213 </button>  
+  <button class="stores" onclick="storePick('Noodles & Co')"> Noodles, Co. 3805 Forbes Ave, Pittsburgh, PA 15213 </button>
 </div>
 
 
   <div id="coffees">
+    <div id="starbs">
   <select id = "Starbucks">
   <option value=""> Select one</option>
-  <option value="volvo">Black Coffee</option>
-  <option value="saab">Latte</option>
-  <option value="opel">Seasonal Drink</option>
-  <option value="audi">Drink & Pastry</option>
+  <option value="$2.00">Black Coffee</option>
+  <option value="$3.50">Latte</option>
+  <option value="$4.00">Seasonal Drink</option>
+  <option value="$6.00">Drink & Pastry</option>
   </select>
-  <button class="submit" onclick="getDrop()"> Click </button>
-
+  <button class="submit" onclick="getDrop('Starbucks')"> Add </button>
+</div>
 
 
 <select id = "CrazyMocha">
   <option value=""> Select one</option>
-  <option value="Hot Brew Coffee"> Hot Brew Coffee</option>
-  <option value="Iced Coffee"> Iced Coffee</option>
-  <option value="Hot Chocolate"> Hot Chocolate</option>
-  <option value="Muffins"> Muffin</option>
-  <option value="Bagel"> Bagel</option>
+  <option value="$2.00"> Hot Brew Coffee</option>
+  <option value="$2.00"> Iced Coffee</option>
+  <option value="$2.50"> Hot Chocolate</option>
+  <option value="$1.50"> Muffin</option>
+  <option value="$1.00"> Bagel</option>
   </select>
-  <button class="submit" onclick="getDrop()"> Click </button>
+  <button class="submit" onclick="getDrop()"> Add </button>
   </div>
 
 <div id="pizzas">
 <select id = "Sorrentos">
   <option value=""> Select one</option>
-  <option value="a"> Small Pizza</option>
-  <option value="b"> Medium Pizza</option>
-  <option value="c"> Large Pizza</option>
-  <option value="h"> Large Pizza and Soda</option>
-  <option value="d"> Breadsticks</option>
-  <option value="e"> Soda</option>
-  <option value="f"> Pepperoni Rolls</option>
-  <option value="g"> Calzone</option>
+  <option value="$6.00"> Small Pizza</option>
+  <option value="$7.00"> Medium Pizza</option>
+  <option value="$8.00"> Large Pizza</option>
+  <option value="$12.00"> Large Pizza and Soda</option>
+  <option value="$5.00"> Breadsticks</option>
+  <option value="$11.00"> Soda</option>
+  <option value="$7.00"> Pepperoni Rolls</option>
+  <option value="$11.00"> Calzone</option>
   </select>
   <button class="submit" onclick="getDrop()"> Click </button>
 
@@ -97,43 +97,42 @@
 
 <select id = "Antoons">
   <option value=""> Select one</option>
-  <option value="Pizza slice"> Pizza slice</option>
-  <option value="Whole pizza"> Whole Pizza</option>
-  <option value="Pizza and wings"> Pizza and Wings</option>
-  <option value="Hoagie"> Hoagie</option>
-  <option value="Calzone"> Calzone</option>
-  <option value="Wings"> Wings</option>
+  <option value="$1.50"> Pizza slice</option>
+  <option value="$6.00"> Whole Pizza</option>
+  <option value="$10.00"> Pizza and Wings</option>
+  <option value="$5.00"> Hoagie</option>
+  <option value="$6.00"> Calzone</option>
+  <option value="$6.00"> Wings</option>
   </select>
-   <button class="submit" onclick="getDrop()"> Click </button>
+   
 </div>
 
 <div id="groceries">
-<select id="gianteagle">
+<select id="Giant Eagle">
   <option value=""> Select one</option>
-  <option value="a"> Bathroom Package</option>
-  <option value="d"> Cleaning Supply Package </option>
-  <option value="e"> Medical Supplies </option>
-  <option value="b"> Loaf of Bread</option>
+  <option value="$12.00"> Bathroom Package</option>
+  <option value="$15.00"> Cleaning Supply Package </option>
+  <option value="$20.00"> Medical Supplies </option>
+  <option value="$2.00"> Loaf of Bread</option>
   <option value="c"> Gallon of Milk</option>
   </select>
-   <button class="submit" onclick="getDrop()"> Click </button>
+   
   
 
   
-<select id="giantmarket">
+<select id="Giant Eagle Market District">
   <option value=""> Select one</option>
-  <option value="a"> Meat and Cheese Package</option>
-  <option value="b"> Salad Supplies</option>
-  <option value="c"> Taco Package</option>
-  <option value="d"> Soup</option>
-  <option value="e"> Soup and Bread</option>
+  <option value="$4.00"> Meat and Cheese Package</option>
+  <option value="$3.00"> Salad Supplies</option>
+  <option value="$6.00"> Taco Package</option>
+  <option value="$5.00"> Soup</option>
+  <option value="$6.50"> Soup and Bread</option>
   </select>
-   <button class="submit" onclick="getDrop()"> Click </button>
   
 </div>
 
 <div id="meals">
-<select id="panera">
+<select id="Panera">
   <option value=""> Select one</option>
   <option value="a"> Bagel</option>
   <option value="b"> Coffee</option>
@@ -143,11 +142,11 @@
   <option value="e"> Sandwich</option>
   <option value="g"> Pick Two</option>
   </select>
-  <button class="submit" onclick="getDrop()"> Click </button>
+  
 
 
 
-<select id="noodles">
+<select id="Noodles & Co">
   <option value=""> Select one</option>
   <option value="a"> Regular Pasta</option>
   <option value="b"> Small Pasta</option>
@@ -155,12 +154,14 @@
   <option value="d"> Salad</option>
   <option value="e"> Kid's Meal</option>
   </select>
-   <button class="submit" onclick="getDrop()"> Click </button>
+   
 </div>
 
 </div>
 
 <div class="footer" id="cat">   </div>
+<div class="footer" id="place">   </div>
+<div class="footer" id="food">   </div>
 
 <script>
 
@@ -211,25 +212,38 @@
       $("#grocery").hide();
       $("#meal").hide();
       $("#dropdown").hide();
+      $("#coffees").hide();
+      $("#pizzas").hide();
+      $("#groceries").hide();
+      $("#meals").hide();
+
       
     }
 
     function display(){
       document.getElementById('cat').innerHTML = category;
-      document.getElementById('place').innerHTML= shop;
+      
       
     }
 
-    function getDrop(){
-      
-      var drop = document.getElementById("CrazyMocha");
-      document.getElementById('food').innerHTML= drop.value;
-
+    function getDrop(input){    
+      var name = $( "#Starbucks option:selected" ).text();
+      var amount = document.getElementById(input);
+      var opt = amount.options[amount.selectedIndex];
+      document.getElementById('food').innerHTML= amount.value + " " + opt.text;
     }
 
     function storePick(store){
-      alert(store);
-    }
+      shop = store;
+      document.getElementById('place').innerHTML= store;
+      if(store == 'Starbucks'){
+          alert('match');
+          $("#coffees").show();
+          $("#CrazyMocha").hide();
+      }
+      if(store == 'CrazyMocha'){
+        alert(match);
+    }}
 
    
  </script>
