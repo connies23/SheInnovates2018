@@ -1,0 +1,223 @@
+@font-face {
+	font-family: coffee;
+	src: url("coffee icons.ttf");
+}
+
+@font-face{
+	font-family: sandwich;
+	src: url("Fast Food Icons.ttf");
+}
+
+@font-face{
+	font-family: grocery;
+	src: url("travelcons.ttf");
+}
+
+@font-face{
+	font-family: boldFont;
+	src: url("theboldfont.ttf");
+}
+
+@font-face{
+	font-family: subwyay;
+	src: url("subway-black.ttf");
+}
+
+.title {
+	height: 150px;
+	text-align: center;
+
+}
+
+.title img {
+	text-align:center;
+	height: 75px;
+	
+}
+
+table {
+	margin: 1em auto;
+}
+
+ul {
+	font-family: subway;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;   
+}
+
+li {
+	display:inline;
+}
+
+li a{
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    text-decoration-style:  none;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+li a:hover{
+	text-decoration: none;
+	border-bottom: 2px solid black;
+}
+
+li a:visited{
+	text-decoration-style:  none;
+}
+
+.coffee {font-family: coffee;	
+	font-size: 100px;
+}
+
+.grocery {font-family: grocery;
+	font-size: 100px;
+
+	
+}
+
+.sandwich {font-family: sandwich;
+	font-size: 100px;
+}
+
+
+.choices {
+	text-align: center;
+	display:inline-block;
+	font-size: 100px;
+	text-decoration: none;
+
+}
+
+.choices a {
+	color: black;
+	text-decoration: none;
+	padding: 50px;
+	
+}
+
+a{
+	color:black;
+	text-decoration: none;
+}
+
+.choices a:hover{
+	color:gray;
+	font-size: 100px;
+}
+
+
+body {
+	text-align: center;
+	margin-top: 1em auto;
+	margin-right: 1em auto;
+	margin-left: 1em auto;
+	
+
+}
+
+.options {
+	text-align: center;
+	font-family: boldfont;
+	font-size: 50px;
+
+}
+
+.options td {
+	font-size: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.options th {
+	font-size: 20px;
+}
+
+.address {text-decoration: underline;
+font-family: subway;}
+
+.input {
+	font-family: boldfont;
+	padding-top: 20px;
+}
+
+.buttons {
+	padding-top: 50px;
+}
+
+button  {
+	background-color:  #008080;
+	color:white; padding: 30px; 
+	cursor: pointer;
+	font-family: subway;
+	border: none;
+	display: inline-block;
+}
+
+button .left{
+	float: left;
+}
+
+button .right {
+	float:right;
+}
+
+button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.rectangle {
+	padding-top: 20px;
+	text-align:center;
+	background-color: #263f6d; 
+	height: 1000px;
+	width: 500px;
+	margin: 1em auto;
+
+}
+
+#cat {
+	font-family: boldfont;
+	font-size: 20px;
+	
+}
+
+.submit
+{
+	background-color:  #008080;
+	color:white; 
+	padding: 5px; 
+	cursor: pointer;
+	font-family: subway;
+	border: none;
+	display: inline-block;
+
+}
+
+footer {
+    position:relative;
+    clear:both;
+    height:100px; /* Tinggi footer */
+    line-height:30px;
+    margin-top:-30px; /* Angkat ke atas setinggi 'tinggi footer' */
+    background-color:black;
+    color:white;
+    padding-top: 10px;
+}
+
+.stores {
+	background-color: white;
+	color:black;
+	padding: 5px;
+	border: none;
+
+}
+
+.coffee, .pizzas, .meals, .groceries {
+	padding: 50px;
+}
+
