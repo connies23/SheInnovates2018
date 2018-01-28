@@ -10,7 +10,7 @@
 <body onload="loadFunction()">
 		<ul>
   <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
+  <li><a href="dialogflow.html">chat</a></li>
   <li class="title"> <img src="headerfwd.png" alt="LOGO"> </li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li></ul> </div>
@@ -19,10 +19,10 @@
 
   <div>
   <table class="choices"> <tr>
-  <td id="coffee"> <button class="coffee" onclick="showCoffee()"> f </button></td>
-  <td class="sandwich"><button class="sandwich" onclick="showMeal()"> Y </button></td>
-  <td class="sandwich"> <button class="sandwich" onclick="showPizza()"> o </button> </td>
-  <td class="grocery"><button class="grocery" onclick="showGrocery()"> g </button></td> </tr>
+  <td id="coffee"> <button class="coffee" class="icons" onclick="showCoffee()"> f </button></td>
+  <td class="sandwich"><button class="sandwich" class="icons" onclick="showMeal()"> Y </button></td>
+  <td class="sandwich"> <button class="sandwich" class="icons" onclick="showPizza()"> o </button> </td>
+  <td class="grocery"><button class="grocery" class="icons"onclick="showGrocery()"> g </button></td> </tr>
   <tr class="options"> 
     <td> coffee </td>
     <td> meals </td>
@@ -34,38 +34,26 @@
 
 <div id="options" class="stores"> 
   
-    <button> Starbucks  417 S Craig St, Pittsburgh, PA 15213 </button>   
-    <button>  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
+    <button class="stores" onclick="storePick('starbucks')"> Starbucks  417 S Craig St, Pittsburgh, PA 15213 </button>   
+    <button class="stores">  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
 </div>
 
-<table id="pizza"> 
-  <tr class="options"> 
-    <td> Sorrentos </td>
-    <td class="address">  233 Atwood St, Pittsburgh, PA 15213 </td>   
-  </tr><tr class="options">
-  <td> Antoon's </td>
-    <td class="address">  247 Atwood St, Pittsburgh, PA 15213 </td></tr>
-</table>
+<div id="pizza">  
+    <button class="stores"> Sorrentos 233 Atwood St, Pittsburgh, PA 15213 </button>   
+    <button class="stores"> Antoon's 247 Atwood St, Pittsburgh, PA 15213 </button>
+</div>
 
 
-<table id="grocery"> 
-  <tr class="options"> 
-    <td> Giant Eagle </td>
-    <td class="address">  2021 Wharton Ave, Pittsburgh, PA 15203 </td>    
-  </tr><tr class="options">
-  <td> Giant Eagle Market District </td>
-    <td class="address"> 5550 Centre Ave, Pittsburgh, PA 15232 </td></tr>
-</table>
+<div id="grocery"> 
+  <button class="stores"> Giant Eagle 2021 Wharton Ave, Pittsburgh, PA 15203 </button>   
+  <button class="stores"> Giant Eagle Market District 5550 Centre Ave, Pittsburgh, PA 15232 </button>
+</div>
 
 
-<table id="meal"> 
-  <tr class="options"> 
-    <td> Panera </td>
-    <td class="address">  3800 Forbes Ave, Pittsburgh, PA 15213 </td>   
-  </tr> <tr class="options"> 
-  <td> Noodles, Co. </td>
-    <td class="address">  3805 Forbes Ave, Pittsburgh, PA 15213 </td></tr>
-</table>
+<div id="meal"> 
+  <button class="stores">  Panera 3800 Forbes Ave, Pittsburgh, PA 15213 </button>  
+  <button class="stores"> Noodles, Co. 3805 Forbes Ave, Pittsburgh, PA 15213 </button>
+</div>
 
 
   <div id="coffees">
@@ -236,9 +224,11 @@
       
       var drop = document.getElementById("CrazyMocha");
       document.getElementById('food').innerHTML= drop.value;
-      
 
+    }
 
+    function storePick(store){
+      alert(store);
     }
 
    
