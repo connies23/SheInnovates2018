@@ -1,19 +1,43 @@
 <html>
 <!DOCTYPE html>
 <link REL="STYLESHEET" TYPE="text/css" HREF="store.css"> 
+<link REL="STYLESHEET" TYPE="text/css" HREF="bodystyle.css"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <title> Fwd: </title>
 <body>
-	<div class="title"> <img src="fwdd.png" alt="LOGO"> </div>
+	<div class="title" style="padding-bottom: 50px;"> <img src="fwdd.png" alt="LOGO" style="size: 100%;"> </div>
+
+	 <select id = "Starbucks" >
+  <option value=""> Select one</option>
+  <option value=5>Black Coffee</option>
+  <option value=2>Latte</option>
+  <option value=7>Seasonal Drink</option>
+  <option value=4>Drink & Pastry</option>
+  </select>
+  <button class="submit" id="submit"onclick="getDrop()"> Check </button>
 	<table> <tr>
-		<td> Coffee </td>
-		<td class="coffee"> F F F</td>
-	</tr>
-	<tr>
-		<td> bakery </td>
-		<td class="bakery"> t t </td>
+		<td id="type">  </td>
+		<td class="coffee" id="amount"></td>
 	</tr>
 </table>
   
 </ul>
+
+<script type="text/javascript">
+
+
+	function getDrop(){    
+      var amount = document.getElementById('Starbucks');
+      var opt = amount.options[amount.selectedIndex];
+      document.getElementById('type').innerHTML= opt.text + "s";
+      document.getElementById('amount').innerHTML = "";
+      for (i = 0; i < amount.value; i++) { 
+    		$('#amount').append(amount.value);
+		}
+      
+      
+    }
+
+</script>
 </body>
 </html>
