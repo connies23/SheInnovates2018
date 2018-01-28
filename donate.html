@@ -10,7 +10,7 @@
 </head>
 <body onload="loadFunction()">
 		<ul>
-  <li><a href="#home">Home</a></li>
+  <li><a href="#index.html">Home</a></li>
   <li><a href="dialogflow.html">chat</a></li>
   <li class="title"> <img src="headerfwd.png" alt="LOGO"> </li>
   <li><a href="#contact">Contact</a></li>
@@ -173,6 +173,8 @@
     var food = "";
 
     function showCoffee(){
+       var top = document.getElementById('map').offsetTop;
+       window.scrollTo(0, top);
       category = "Coffee";
       $("#options").show();
       $("#pizza").hide();
@@ -182,6 +184,8 @@
     }
 
     function showPizza(){
+      var top = document.getElementById('map').offsetTop;
+       window.scrollTo(0, top);
       category = "Pizza";
       $("#pizza").show();
       $("#options").hide();
@@ -191,6 +195,8 @@
     }
 
     function showMeal(){
+      var top = document.getElementById('map').offsetTop;
+       window.scrollTo(0, top);
       category = "Meal";
       $("#meal").show();
       $("#options").hide();
@@ -200,6 +206,8 @@
     }
 
     function showGrocery(){
+      var top = document.getElementById('map').offsetTop;
+       window.scrollTo(0, top);
       category = "Grocery";
       $("#grocery").show();
       $("#options").hide();
@@ -241,6 +249,9 @@
     }
 
     function storePick(store){
+        var top = document.getElementById('food').offsetTop;
+       window.scrollTo(0, top);
+      
       $("#submit").show();
       shop = store;
       document.getElementById('place').innerHTML= "FROM: " + store;
