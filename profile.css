@@ -1,0 +1,184 @@
+@font-face {
+	font-family: coffee;
+	src: url("coffee icons.ttf");
+}
+
+@font-face{
+	font-family: sandwich;
+	src: url("Fast Food Icons.ttf");
+}
+
+@font-face{
+	font-family: subwyay;
+	src: url("subway-black.ttf");
+}
+
+.title {
+	height: 200px;
+	text-align: center;
+}
+
+.title img {
+	text-align:center;
+	height: 500px;
+	padding-top: 100px;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	
+	padding:0;
+	background-color: #ffffff;
+	overflow: none;
+}
+
+
+ul {
+	font-family: subway;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;   
+}
+
+li {
+	display:inline;
+}
+
+li a{
+    display: inline;
+    padding-left: 20px;
+    color: black;
+    text-decoration-style:  none;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+li a:hover{
+	color:   #aed581 ;
+}
+
+li a:visited{
+	text-decoration-style:  none;
+}
+
+.parallax {
+    /* The image used */
+    padding-top: 10px;
+    padding-bottom: 0px;
+    background-color: #008080;
+    opacity: 0.85;
+	text-align: center;
+	font-family: 'Courgette', cursive;
+	
+	font-size: xx-large;
+
+    /* Set a specific height */
+    min-height: 50px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.meat {
+    /* The image used */
+    padding-top: 00px;
+	background-image: url("sf.jpg");
+	text-align: center;
+	font-size: large;
+
+    /* Set a specific height */
+    min-height:500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.question{
+ /* The image used */
+    padding-top: 15px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    opacity: 0.85;
+	text-align: center;
+	font-family: 'Courgette', cursive;
+	
+	font-size: small;
+
+    /* Set a specific height */
+    min-height: 30px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+}
+
+
+div.butt{
+   /* The image used */
+    padding-top: 0px;
+    background-color: #ffffff;
+    opacity: 0.75;
+	
+	font-family: 'Courgette', cursive;
+	
+	padding: 10px;
+    /* Set a specific height */
+    min-height: 100px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+button .login{
+	background-color: #008080;
+	color: black; 
+	padding: 50px; 
+	cursor: pointer;
+	font-family: subway;
+	border: none;
+	display: inline-block;
+}
+
+.buttons {
+	padding-top: 50px;
+}
+
+.about {
+	padding-top: 20px;
+	background-color: white;
+    opacity: 0.7;
+    font-family: subway;
+    font-size: 20px;
+    /* Set a specific height */
+    min-height: 200px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/*STICKY*/
+
