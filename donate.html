@@ -2,6 +2,7 @@
 <!DOCTYPE html> <head>
 <link REL="STYLESHEET" TYPE="text/css" HREF="bodystyle.css">
 <title> Fwd: Donate </title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="path/to/jquery.js"></script> 
 <script src="path/to/jquery.nice-select.js"></script>
@@ -31,27 +32,29 @@
   </tr>
 </table>
 
+<div id='map'></div>
 
+<p class="design"> Select a store: </p>
 <div id="options" class="stores">  
     <button class="stores" onclick="storePick('Starbucks')"> Starbucks  417 S Craig St, Pittsburgh, PA 15213 </button>   
-    <button class="stores" onclick="storePick('Crazy Mocha')">  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
+    <button class="stores" onclick="storePick('CrazyMocha')">  Crazy Mocha  4400 Forbes Ave, Pittsburgh, PA 15213 </button> 
 </div>
 
 <div id="pizza">  
     <button class="stores" onclick="storePick('Sorrentos')"> Sorrentos 233 Atwood St, Pittsburgh, PA 15213 </button>   
-    <button class="stores" onclick="storePick('Antoon's)"> Antoon's 247 Atwood St, Pittsburgh, PA 15213 </button>
+    <button class="stores" onclick="storePick('Antoons')"> Antoon's 247 Atwood St, Pittsburgh, PA 15213 </button>
 </div>
 
 
 <div id="grocery"> 
-  <button class="stores" onclick="storePick('Giant Eagle')"> Giant Eagle 2021 Wharton Ave, Pittsburgh, PA 15203 </button>   
-  <button class="stores" onclick="storePick('Giant Eagle Market District')"> Giant Eagle Market District 5550 Centre Ave, Pittsburgh, PA 15232 </button>
+  <button class="stores" onclick="storePick('GiantEagle')"> Giant Eagle 2021 Wharton Ave, Pittsburgh, PA 15203 </button>   
+  <button class="stores" onclick="storePick('GiantEagleMarketDistrict')"> Giant Eagle Market District 5550 Centre Ave, Pittsburgh, PA 15232 </button>
 </div>
 
 
 <div id="meal"> 
   <button class="stores" onclick="storePick('Panera')">  Panera 3800 Forbes Ave, Pittsburgh, PA 15213 </button>  
-  <button class="stores" onclick="storePick('Noodles & Co')"> Noodles, Co. 3805 Forbes Ave, Pittsburgh, PA 15213 </button>
+  <button class="stores" onclick="storePick('NoodlesCo')"> Noodles, Co. 3805 Forbes Ave, Pittsburgh, PA 15213 </button>
 </div>
 
 
@@ -64,7 +67,7 @@
   <option value="$4.00">Seasonal Drink</option>
   <option value="$6.00">Drink & Pastry</option>
   </select>
-  <button class="submit" onclick="getDrop('Starbucks')"> Add </button>
+ 
 </div>
 
 
@@ -76,7 +79,6 @@
   <option value="$1.50"> Muffin</option>
   <option value="$1.00"> Bagel</option>
   </select>
-  <button class="submit" onclick="getDrop()"> Add </button>
   </div>
 
 <div id="pizzas">
@@ -91,7 +93,6 @@
   <option value="$7.00"> Pepperoni Rolls</option>
   <option value="$11.00"> Calzone</option>
   </select>
-  <button class="submit" onclick="getDrop()"> Click </button>
 
 
 
@@ -108,19 +109,19 @@
 </div>
 
 <div id="groceries">
-<select id="Giant Eagle">
+<select id="GiantEagle">
   <option value=""> Select one</option>
   <option value="$12.00"> Bathroom Package</option>
   <option value="$15.00"> Cleaning Supply Package </option>
   <option value="$20.00"> Medical Supplies </option>
   <option value="$2.00"> Loaf of Bread</option>
-  <option value="c"> Gallon of Milk</option>
+  <option value="$1.99"> Gallon of Milk</option>
   </select>
    
   
 
   
-<select id="Giant Eagle Market District">
+<select id="GiantEagleMarketDistrict">
   <option value=""> Select one</option>
   <option value="$4.00"> Meat and Cheese Package</option>
   <option value="$3.00"> Salad Supplies</option>
@@ -134,35 +135,37 @@
 <div id="meals">
 <select id="Panera">
   <option value=""> Select one</option>
-  <option value="a"> Bagel</option>
-  <option value="b"> Coffee</option>
-  <option value="c"> Bagel and Coffee</option>
-  <option value="f"> Soup</option>
-  <option value="d"> Salad</option>
-  <option value="e"> Sandwich</option>
-  <option value="g"> Pick Two</option>
+  <option value="$1.75"> Bagel</option>
+  <option value="$2.00"> Coffee</option>
+  <option value="$5.00"> Bagel and Coffee</option>
+  <option value="$3.00"> Soup</option>
+  <option value="$8.00"> Salad</option>
+  <option value="$7.00"> Sandwich</option>
+  <option value="$8.00"> Pick Two</option>
   </select>
   
 
 
 
-<select id="Noodles & Co">
+<select id="NoodlesCo">
   <option value=""> Select one</option>
-  <option value="a"> Regular Pasta</option>
-  <option value="b"> Small Pasta</option>
-  <option value="c"> Soup</option>
-  <option value="d"> Salad</option>
-  <option value="e"> Kid's Meal</option>
+  <option value="$7.50"> Regular Pasta</option>
+  <option value="$6.00"> Small Pasta</option>
+  <option value="$6.00"> Soup</option>
+  <option value="$7.00"> Salad</option>
+  <option value="$5.00"> Kid's Meal</option>
   </select>
    
 </div>
 
 </div>
 
+ <button class="submit" id="submit"onclick="getDrop('Starbucks')"> Add </button>
+<div class = "receipt">
 <div class="footer" id="cat">   </div>
 <div class="footer" id="place">   </div>
 <div class="footer" id="food">   </div>
-
+</div>
 <script>
 
     var category = "";
@@ -212,38 +215,157 @@
       $("#grocery").hide();
       $("#meal").hide();
       $("#dropdown").hide();
-      $("#coffees").hide();
-      $("#pizzas").hide();
-      $("#groceries").hide();
-      $("#meals").hide();
+      $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Antoons").hide();
+      $("#Sorrentos").hide();
+      $("#Panera").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagle").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      $("#submit").hide();
 
       
     }
 
     function display(){
-      document.getElementById('cat').innerHTML = category;
+      document.getElementById('cat').innerHTML = "CATEGORY: " + category;
       
       
     }
 
     function getDrop(input){    
-      var name = $( "#Starbucks option:selected" ).text();
-      var amount = document.getElementById(input);
+      var amount = document.getElementById(shop);
       var opt = amount.options[amount.selectedIndex];
-      document.getElementById('food').innerHTML= amount.value + " " + opt.text;
+      document.getElementById('food').innerHTML= opt.text + ": " + amount.value;
     }
 
     function storePick(store){
+      $("#submit").show();
       shop = store;
-      document.getElementById('place').innerHTML= store;
+      document.getElementById('place').innerHTML= "FROM: " + store;
       if(store == 'Starbucks'){
-          alert('match');
-          $("#coffees").show();
+          $("#Starbucks").show();
           $("#CrazyMocha").hide();
+          $("#Antoons").hide();
+          $("#Sorrentos").hide();
+          $("#Panera").hide();
+          $("#NoodlesCo").hide();
+          $("#GiantEagle").hide();
+          $("#GiantEagleMarketDistrict").hide();
       }
-      if(store == 'CrazyMocha'){
-        alert(match);
-    }}
+      else if(shop == 'CrazyMocha'){   
+        $("#CrazyMocha").show(); 
+         $("#Starbucks").hide();
+      $("#Antoons").hide();
+      $("#Sorrentos").hide();
+      $("#Panera").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagle").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      }
+      else if(shop == 'Antoons'){
+        $("#Antoons").show();
+           $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Sorrentos").hide();
+      $("#Panera").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagle").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      }
+      else if(store == 'Sorrentos'){
+        $("#Sorrentos").show();
+         $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Antoons").hide();
+      $("#Panera").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagle").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      }
+      else if(store == 'Panera'){
+        $("#Panera").show();
+         $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Antoons").hide();
+      $("#Sorrentos").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagle").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      }
+      else if(store == 'NoodlesCo'){
+        $("#NoodlesCo").show();
+         $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Antoons").hide();
+      $("#Sorrentos").hide();
+      $("#Panera").hide();
+      $("#GiantEagle").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      }
+       else if(store == 'GiantEagle'){
+        $("#GiantEagle").show();
+         $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Antoons").hide();
+      $("#Sorrentos").hide();
+      $("#Panera").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagleMarketDistrict").hide();
+      }
+       else if(store == 'GiantEagleMarketDistrict'){
+        $("#GiantEagleMarketDistrict").show();
+         $("#Starbucks").hide();
+      $("#CrazyMocha").hide();
+      $("#Antoons").hide();
+      $("#Sorrentos").hide();
+      $("#Panera").hide();
+      $("#NoodlesCo").hide();
+      $("#GiantEagle").hide();
+      
+      }
+
+  }
+
+
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: {lat: 40.4417087, lng: -79.95733910000001}
+        });
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+        {lat: 40.4416766, lng: -79.95654909999996}, //panera
+        {lat: 40.4417087, lng: -79.95733910000001}, //sushi fuku
+        {lat: 40.44188990000001, lng: -79.9571545}, //oishii
+        {lat: 40.4608247, lng: -79.922032}, //target
+        {lat: 40.488347, lng: -79.88890700000002}, //walmart
+        {lat: 40.45816730000001, lng: -79.9349191}, //aldi
+        {lat: 40.4269137, lng: -79.96752809999998}, //aldi
+        {lat: 40.4589599, lng: -79.91933449999999},
+    {lat: 40.456538, lng: -79.934433} //giant eagle
+      ]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtrbhtiAGRQMiGqPRQFI0D2A4nB84Aftk&callback=initMap">
 
    
  </script>
