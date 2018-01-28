@@ -13,6 +13,7 @@
 	src: url("subway-black.ttf");
 }
 
+
 .title {
 	height: 200px;
 	text-align: center;
@@ -27,7 +28,7 @@
 body {
 	width: 100%;
 	margin: 0;
-	
+	background-image: url("sf.jpg");
 	padding:0;
 	background-color: #ffffff;
 	overflow: none;
@@ -88,12 +89,11 @@ li a:visited{
 .meat {
     /* The image used */
     padding-top: 00px;
-	background-image: url("sf.jpg");
 	text-align: center;
 	font-size: large;
 
     /* Set a specific height */
-    min-height:500px; 
+    min-height:100px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -112,7 +112,7 @@ li a:visited{
 	text-align: center;
 	font-family: 'Courgette', cursive;
 	
-	font-size: small;
+	font-size: large;
 
     /* Set a specific height */
     min-height: 30px; 
