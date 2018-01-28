@@ -28,9 +28,12 @@ body {
 	width: 100%;
 	margin: 0;
 	padding:0;
-	background-image: url("coffeshop1.PNG");
+	background: url("people-in-a-coffee-shop.webp");
 	overflow: none;
+    background-size: 1000px;
 }
+
+
 
 
 ul {

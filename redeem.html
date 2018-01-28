@@ -243,6 +243,7 @@
     }
 
     function getDrop(input){    
+      window.scrollTo(0,document.body.scrollHeight);
       var amount = document.getElementById(shop);
       var opt = amount.options[amount.selectedIndex];
       document.getElementById('food').innerHTML= amount.value + " " + opt.text + "s";
