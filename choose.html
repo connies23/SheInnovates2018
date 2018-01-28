@@ -25,6 +25,30 @@
 
 <div class="parallax">Hello, Jane! Glad to see you again.</div>
 
+<script>
+var msg = ["meal, Small pasta from Noodles and Co.", 
+			"drink, Medium iced coffee from Dunkin' Donuts", 
+			"item, Toothpaste from Target", 
+			"meal, Chipotle burrito",
+			"drink, Small hot chocolate from Crazy Mocha"];
+			
+var count = 1;
+var num = 0;
+window.setInterval(function() {spawnNotification("Jane", "fwdd.png", "Hi Jane -your donated " + msg[num] + " was just redeemed!")}, 30000);
+
+function spawnNotification(title, icon, theBody) {
+  var options = {
+      body: theBody,
+      icon: icon
+  }
+  var n = new Notification(title,options);
+  count++;
+  num = count%5;
+  setTimeout(n.close.bind(n), 4000);
+}
+
+</script>
+
 </head>
 <title> Profile Page: </title>
 
