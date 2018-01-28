@@ -19,12 +19,12 @@
 }
 
 @font-face{
-	font-family: subway;
+	font-family: subwyay;
 	src: url("subway-black.ttf");
 }
 
 .title {
-	height: 100px;
+	height: 150px;
 	text-align: center;
 
 }
@@ -57,13 +57,13 @@ li a{
     padding-right: 10px;
     color: black;
     text-decoration-style:  none;
-    font-size: 20px;
+    font-size: 10px;
     text-decoration: none;
 }
 
 li a:hover{
 	text-decoration: none;
-	
+	border-bottom: 2px solid black;
 }
 
 li a:visited{
@@ -146,13 +146,13 @@ font-family: subway;}
 }
 
 .buttons {
-	padding-top: 20px;
+	padding-top: 50px;
 }
 
 button  {
 	background-color:  #008080;
 	color:white; 
-	padding: 30px; 
+	padding: 50px; 
 	cursor: pointer;
 	font-family: subway;
 	border: none;
@@ -221,26 +221,4 @@ footer {
 .coffees, .pizzas, .meals, .groceries {
 	padding: 50px;
 }
-
-.receipt {
-	font-family: boldfont;
-	padding: 50px;
-	border: black solid;
-	padding-top: 50px;
-}
-
-.display {
-	padding: 50px;
-}
-
-.design {
-	font-family: subway;
-	font-size: 20px;
-}
-
- #map {
-        height: 70%;
-		width:  50%;
-		margin: 1em auto;
-      }
 
